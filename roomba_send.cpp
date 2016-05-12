@@ -1,18 +1,4 @@
 /*
-roomba_wall.ino
-A simple sketch to broadcast a "virtual wall" signal for an iRobot Roomba,
-which also blinks a status LED when active.  Based on a sketch snippet by
-probono (credited below), simplified for use on the ATTiny85, and modified slightly.
-
-Changelog:
-v.0.2: 5-10-2016 Peter Dunshee <peterdun@exmsft.com>
-	Simplified code for transmitting only Virtual Wall signal and removed UART support to run on ATTiny85
-	Added status LED
-
-v.0.1: 2013 probono
-	Initial release, Roomba transmit code--general purpose via UART commands
-*/
-/*
 
 Send infrared commands from the Arduino to the iRobot Roomba
 by probono
@@ -100,31 +86,7 @@ BB = Which Beam
 
 */
 
-#include <IRremote.h>
-#include <avr/power.h>
-
-IRsend irsend; // hardwired to pin 0 on ATTiny85; use a transistor to drive the IR LED for maximal range
-
-void setup()
-{
-	if (F_CPU == 16000000) clock_prescale_set(clock_div_1);
-
-	// Red-Status LED
-	pinMode(4, OUTPUT);
-	digitalWrite(4, LOW);
-}
-
-int i = 0;
-void loop()
-{
-	i++;
-	if (i == 0) digitalWrite(4, LOW);
-	if (i == 100) digitalWrite(4, HIGH);
-	if (i == 105) i = -1;
-
-	roomba_send(162); // Virtual Wall
-	delay(1000);
-}
+#include "roomba_wall_v2.h"
 
 void roomba_send(int code)
 {
@@ -151,9 +113,8 @@ void roomba_send(int code)
 		arrayposition = arrayposition + 2;
 	}
 	for (int i = 0; i < 3; i++) {
-		irsend.sendRaw(raw, 15, 38);
+		sendRawIR(raw, 15, 38); //irsend.sendRaw(raw, 15, 38);  // Based on IRRemote library
 		delay(50);
 	}
 	//Serial.println("");
 }
-
