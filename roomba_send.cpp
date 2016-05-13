@@ -114,7 +114,7 @@ void roomba_send(int code)
 	}
 	for (int i = 0; i < 3; i++) {
 		sendRawIR(raw, 15, 38); //irsend.sendRaw(raw, 15, 38);  // Based on IRRemote library
-		delay(50);
+		delay_ten_us(5000); //50ms = 50000us
 	}
 	//Serial.println("");
 }

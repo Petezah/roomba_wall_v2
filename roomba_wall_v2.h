@@ -14,14 +14,17 @@ Author:	Peter Dunshee
 extern "C" {
 #endif
 
-void init();
-unsigned long micros();
-void delay(unsigned long ms);
+// Shortcut to insert single, non-optimized-out nop
+#define NOP __asm__ __volatile__ ("nop")
+
+// Tweak this if neccessary to change timing
+#define DELAY_CNT 11
 
 #ifdef __cplusplus
 } // extern "C"
 #endif
 
+void delay_ten_us(unsigned long us);
 void roomba_send(int code);
 void sendRawIR(const unsigned int buf[], unsigned int len, unsigned int hz);
 void enableIROut(int khz);

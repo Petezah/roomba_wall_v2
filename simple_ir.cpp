@@ -25,7 +25,7 @@
 #ifdef F_CPU
 #	define SYSCLOCK  F_CPU     // main Arduino clock
 #else
-#	define SYSCLOCK  16000000  // main Arduino clock
+#	define SYSCLOCK  8000000  // main Arduino clock
 #endif
 
 #define STRINGIZE1(X) #X
@@ -42,7 +42,7 @@
 #define TIMER_DISABLE_INTR   (TIMSK &= ~(_BV(OCIE0A)))
 #define TIMER_INTR_NAME      TIMER0_COMPA_vect
 #define TIMER_CONFIG_KHZ(val) ({ \
-  const uint8_t pwmval = SYSCLOCK / 2000 / (val); \
+  const uint8_t pwmval = SYSCLOCK / 1000 / (val) / 2; \
   TCCR0A = _BV(WGM00); \
   TCCR0B = _BV(WGM02) | _BV(CS00); \
   OCR0A = pwmval; \
@@ -107,21 +107,44 @@ void enableIROut(int khz)
 	TIMER_CONFIG_KHZ(khz);
 }
 
+// Below function (delay_ten_us) was taken from the TV-B-Gone project, attributed below:
+/*
+TV-B-Gone Firmware version 1.2
+for use with ATtiny85v and v1.2 hardware
+(c) Mitch Altman + Limor Fried 2009
+Last edits, August 16 2009
+
+With some code from:
+Kevin Timmerman & Damien Good 7-Dec-07
+
+Distributed under Creative Commons 2.5 -- Attib & Share Alike
+
+This is the 'universal' code designed for v1.2 - it will select EU or NA
+depending on a pulldown resistor on pin B1 !
+*/
+// This function delays the specified number of 10 microseconds
+// it is 'hard coded' and is calibrated by adjusting DELAY_CNT
+// in main.h Unless you are changing the crystal from 8mhz, don't
+// mess with this.
+void delay_ten_us(unsigned long us) {
+	uint8_t timer;
+	while (us != 0) {
+		// for 8MHz we want to delay 80 cycles per 10 microseconds
+		// this code is tweaked to give about that amount.
+		for (timer=0; timer <= DELAY_CNT; timer++) {
+			NOP;
+			NOP;
+		}
+		NOP;
+		us--;
+	}
+}
+
 //+=============================================================================
 // Custom delay function that circumvents Arduino's delayMicroseconds limit
 //IRsend::custom_delay_usec
 void custom_delay_usec(unsigned long uSecs) {
-	if (uSecs > 4) {
-		unsigned long start = micros();
-		unsigned long endMicros = start + uSecs - 4;
-		if (endMicros < start) { // Check if overflow
-			while (micros() > start) {} // wait until overflow
-		}
-		while (micros() < endMicros) {} // normal wait
-	}
-	//else {
-	//  __asm__("nop\n\t"); // must have or compiler optimizes out
-	//}
+	delay_ten_us(uSecs/10);
 }
 
 //+=============================================================================
