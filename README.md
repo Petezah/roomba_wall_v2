@@ -30,4 +30,4 @@ NB: 'make fuse' will set the AVR up for an external oscillator.  It is better to
 
 My prototype board layout is as follows:
 
-![Breadboard layout for roomba_wall_v2 using ATTiny85]("https://github.com/Petezah/roomba_wall_v2/blob/develop/hardware/roomba_wall_v2_bb.png" "Breadboard layout for roomba_wall_v2")
+<img src="https://github.com/Petezah/roomba_wall_v2/blob/develop/hardware/roomba_wall_v2_bb.png"/>
