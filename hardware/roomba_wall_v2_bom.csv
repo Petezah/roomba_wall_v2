@@ -1,0 +1,14 @@
+"Part";"Value";"Device";"Package";"Description";"MPN";"OC_FARNELL";"OC_NEWARK";"PACKAGE";"SUPPLIER";"VALUE";
+"CN1";"";"DCBARRELPTH";"DCJACK_2MM_PTH";"2.0mm DC Barrel Jack";"";"";"";"";"";"";
+"CN2";"";"JST_2PIN-SMT-RA";"JST-PH-2-SMT-RA";"JST 2-Pin Connectors of various flavors";"";"";"";"";"";"";
+"IC1";"ATTINY85-20PU";"ATTINY85-20PU";"DIP254P762X533-8";"8-bit Microcontroller with In-System Programmable Flash";"ATTINY85-20PU";"1455162";"58M3796";"PDIP-8";"Atmel";"";
+"ISP1";"AVRISP-6";"AVRISP-6";"AVRISP";"AVR ISP HEADER";"";"";"";"";"";"";
+"LED1";"IR";"LED3MM";"LED3MM";"LED";"";"";"";"";"";"";
+"LED2";"";"LED3MM";"LED3MM";"LED";"";"";"";"";"";"";
+"R1";"51";"R-US_0204/7";"0204/7";"RESISTOR, American symbol";"";"";"";"";"";"";
+"R2";"560";"R-US_0204/7";"0204/7";"RESISTOR, American symbol";"";"";"";"";"";"";
+"R3";"560";"R-US_0204/7";"0204/7";"RESISTOR, American symbol";"";"";"";"";"";"";
+"S1";"";"EG1218S";"EG1218";"SLIDING SWITCH";"";"";"";"";"";"";
+"T1";"2N2222";"2N2222";"TO92-EBC-OVAL";"NPN TRANSISTOR";"";"";"";"";"";"";
+"U$1";"";"CR2032THM";"CR2032-THRU";"";"";"";"";"";"";"";
+"XTAL1";"8MHZ";"DIP-CERAMIC-RESONATOR/-OSCILLATOR-8MHZ(3P-2.5-8X3MM)";"X3-2.5-8X3X5.5MM";"306030010";"CSTLS8M00G53Z-A0";"";"";"";"";"8MHZ";
