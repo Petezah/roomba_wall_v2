@@ -2,7 +2,7 @@
 
 An AVR device, based on ATTiny85, to transmit a virtual wall signal for an iRobot Roomba
 
-<img src="https://github.com/Petezah/roomba_wall_v2/blob/master/roomba_wall_v2"/>
+<img src="https://github.com/Petezah/roomba_wall_v2/blob/master/roomba_wall_v2.jpg"/>
 
 ## Folder layout
 
