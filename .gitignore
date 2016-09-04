@@ -238,3 +238,4 @@ _Pvt_Extensions
 *.b#*
 *.s#*
 Thumbs.db
+/.vscode
