@@ -21,10 +21,11 @@ int main(void)
 	{
 		i++;
 		if (i == 0) PORTB |= _BV(0);// digitalWrite(4, HIGH);
-		if (i == 2) PORTB &= ~_BV(0); // digitalWrite(4, LOW);
-		if (i == 12) i = -1;
+		if (i == 1) PORTB &= ~_BV(0); // digitalWrite(4, LOW);
+		if (i == 5) i = -1;
 
 		roomba_send(162); // Virtual Wall
-		delay_ten_us(1000);
+		PORTB &= ~_BV(0); // digitalWrite(4, LOW);
+		delay_ten_us(100000);
 	}
 }
