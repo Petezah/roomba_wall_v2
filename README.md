@@ -18,7 +18,9 @@ An AVR device, based on ATTiny85, to transmit a virtual wall signal for an iRobo
 * Raspberry Pi configured with BCM SPI enabled
 * AVR-GCC installed
   *  Easiest way to get this is 'sudo apt-get install arduino'
-* Jumpers to wire SPI bus of Raspberry Pi to the ISP pins on the finished board
+* Either:
+  * A 6-position, dual-row IDC cable (recommended)
+  * Or jumpers to wire SPI bus of Raspberry Pi to the ISP pads on the finished board
 
 ### Steps
 
