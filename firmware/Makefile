@@ -5,11 +5,13 @@ CC=/usr/bin/avr-gcc
 CFLAGS=-g -Os -Wall -mcall-prologues -mmcu=$(MCU) -DF_CPU=$(SYSCLOCK) -I./
 OBJ2HEX=/usr/bin/avr-objcopy
 AVRDUDE=/usr/bin/avrdude
+AVRSIZE=/usr/bin/avr-size
 SOURCES=main.cpp roomba_send.cpp simple_ir.cpp
 TARGET=roomba_wall_v2
 
 all :
 	$(CC) $(CFLAGS) $(SOURCES) -o $(TARGET)
+	$(AVRSIZE) $(TARGET)	
 	$(OBJ2HEX) -R .eeprom -O ihex $(TARGET) $(TARGET).hex
 	rm -f $(TARGET)
 
