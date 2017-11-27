@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name NurseryPager-Hardware)(type KiCad)(uri C:/Users/peter/Source/Repos/NurseryPagerManager/NurseryPager-Hardware/NurseryPager-Hardware.pretty)(options "")(descr ""))
+)

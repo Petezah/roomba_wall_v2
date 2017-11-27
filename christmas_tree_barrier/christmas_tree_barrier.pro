@@ -1,4 +1,4 @@
-update=11/26/2017 3:59:29 PM
+update=11/27/2017 1:39:40 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -59,5 +61,10 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-[general]
-version=1
+LibName33=C:/Users/peter/Source/Repos/kicad-libs/petezah
+LibName34=C:/Users/peter/Source/Repos/kicad-libs/petezah-conn
+LibName35=C:/Users/peter/Source/Repos/kicad-libs/petezah-devices
+LibName36=C:/Users/peter/Source/Repos/kicad-libs/petezah-ic
+LibName37=C:/Users/peter/Source/Repos/kicad-libs/petezah-jumpers
+LibName38=C:/Users/peter/Source/Repos/kicad-libs/petezah-motors
+LibName39=C:/Users/peter/Source/Repos/kicad-libs/petezah-power
