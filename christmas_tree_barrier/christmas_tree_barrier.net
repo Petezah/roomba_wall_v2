@@ -1,16 +1,16 @@
 (export (version D)
   (design
     (source C:/Users/peter/Source/Repos/roomba_wall_v2/christmas_tree_barrier/christmas_tree_barrier.sch)
-    (date "11/30/2017 8:23:25 PM")
+    (date "12/3/2017 9:19:36 PM")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "Roomba Christmas Tree Barrier")
         (company Petezah)
         (rev A)
-        (date 2017-11-26)
+        (date 2017-11-30)
         (source christmas_tree_barrier.sch)
-        (comment (number 1) (value ""))
+        (comment (number 1) (value "(C) 2017 Peter Dunshee"))
         (comment (number 2) (value ""))
         (comment (number 3) (value ""))
         (comment (number 4) (value "")))))
@@ -102,9 +102,9 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5A1C7FC9))
     (comp (ref Q1)
-      (value Q_PNP_BEC)
+      (value Q_NPN_BEC)
       (footprint lib_fp:SOT-23_Handsoldering)
-      (libsource (lib christmas_tree_barrier) (part Q_PNP_BEC))
+      (libsource (lib device) (part Q_NPN_BEC))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A1CDA3E)))
   (libparts
@@ -188,10 +188,11 @@
         (pin (num 3) (name EN) (type input))
         (pin (num 4) (name ADJ/NC) (type BiDi))
         (pin (num 5) (name OUT) (type power_out))))
-    (libpart (lib christmas_tree_barrier) (part Q_PNP_BEC)
+    (libpart (lib device) (part Q_NPN_BEC)
+      (description "Transistor NPN (general)")
       (fields
         (field (name Reference) Q)
-        (field (name Value) Q_PNP_BEC))
+        (field (name Value) Q_NPN_BEC))
       (pins
         (pin (num 1) (name B) (type input))
         (pin (num 2) (name E) (type passive))
@@ -232,7 +233,9 @@
         (pin (num 6) (name Shield) (type passive)))))
   (libraries
     (library (logical christmas_tree_barrier)
-      (uri C:\Users\peter\Source\Repos\roomba_wall_v2\christmas_tree_barrier\lib_sch\christmas_tree_barrier.lib)))
+      (uri C:\Users\peter\Source\Repos\roomba_wall_v2\christmas_tree_barrier\lib_sch\christmas_tree_barrier.lib))
+    (library (logical device)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
   (nets
     (net (code 1) (name +3V3)
       (node (ref IC1) (pin 5))
