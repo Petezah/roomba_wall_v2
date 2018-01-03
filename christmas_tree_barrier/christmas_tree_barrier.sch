@@ -39,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Roomba Christmas Tree Barrier"
-Date "2017-11-30"
-Rev "A"
+Date "2018-01-03"
+Rev "B"
 Comp "Petezah"
 Comment1 "(C) 2017 Peter Dunshee"
 Comment2 ""
@@ -53,7 +53,7 @@ U 1 1 5A1B3BA1
 P 5800 3700
 F 0 "U1" H 4650 4100 50  0000 C CNN
 F 1 "ATTINY45-20SU" H 6800 3300 50  0000 C CNN
-F 2 "lib_fp:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6750 3700 50  0001 C CIN
+F 2 "lib_fp:SOIC-8_5.35x5.40mm_Pitch1.27mm" H 6750 3700 50  0001 C CIN
 F 3 "" H 5800 3700 50  0001 C CNN
 	1    5800 3700
 	1    0    0    -1  
