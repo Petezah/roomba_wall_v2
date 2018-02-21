@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/peter/Source/Repos/roomba_wall_v2/christmas_tree_barrier/christmas_tree_barrier.sch)
-    (date "12/3/2017 9:19:36 PM")
+    (date "1/3/2018 3:03:41 PM")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref U1)
       (value ATTINY45-20SU)
-      (footprint lib_fp:SOIC-8_3.9x4.9mm_Pitch1.27mm)
+      (footprint lib_fp:SOIC-8_5.35x5.40mm_Pitch1.27mm)
       (libsource (lib christmas_tree_barrier) (part ATTINY45-20SU))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A1B3BA1))
@@ -104,7 +104,7 @@
     (comp (ref Q1)
       (value Q_NPN_BEC)
       (footprint lib_fp:SOT-23_Handsoldering)
-      (libsource (lib device) (part Q_NPN_BEC))
+      (libsource (lib christmas_tree_barrier) (part Q_NPN_BEC))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A1CDA3E)))
   (libparts
@@ -188,8 +188,7 @@
         (pin (num 3) (name EN) (type input))
         (pin (num 4) (name ADJ/NC) (type BiDi))
         (pin (num 5) (name OUT) (type power_out))))
-    (libpart (lib device) (part Q_NPN_BEC)
-      (description "Transistor NPN (general)")
+    (libpart (lib christmas_tree_barrier) (part Q_NPN_BEC)
       (fields
         (field (name Reference) Q)
         (field (name Value) Q_NPN_BEC))
@@ -233,9 +232,7 @@
         (pin (num 6) (name Shield) (type passive)))))
   (libraries
     (library (logical christmas_tree_barrier)
-      (uri C:\Users\peter\Source\Repos\roomba_wall_v2\christmas_tree_barrier\lib_sch\christmas_tree_barrier.lib))
-    (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
+      (uri C:\Users\peter\Source\Repos\roomba_wall_v2\christmas_tree_barrier\lib_sch\christmas_tree_barrier.lib)))
   (nets
     (net (code 1) (name +3V3)
       (node (ref IC1) (pin 5))
