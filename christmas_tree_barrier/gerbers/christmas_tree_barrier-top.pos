@@ -1,0 +1,17 @@
+### Module positions - created on Monday, December 04, 2017 'PMt' 03:03:17 PM ###
+### Printed by Pcbnew version kicad 4.0.6
+## Unit = inches, Angle = deg.
+## Side : top
+# Ref     Val            Package                            PosX       PosY       Rot  Side
+C1        10uF           C_1206                           6.5000    -4.9000    0.0000  top
+C2        10uF           C_1206                           6.5000    -4.5000    0.0000  top
+D1        LED            LED_1206                         5.8000    -5.1000  270.0000  top
+D2        IR_LED         LED_0603_HandSoldering           6.7500    -5.1067  270.0000  top
+IC1       MIC5225-3.3    SOT-23-5_HandSoldering           6.3000    -4.8500   90.0000  top
+J1        USB_OTG        USB_Micro-B_10103594-0001LF      6.2925    -5.1181    0.0000  top
+Q1        Q_PNP_BEC      SOT-23_Handsoldering             6.8000    -4.7909  270.0000  top
+R1        560            R_1206                           6.0000    -5.1500  180.0000  top
+R2        560            R_1206                           6.5000    -4.6500    0.0000  top
+R3        51             R_1206                           6.6000    -5.1000  270.0000  top
+U1        ATTINY45-20SU  SOIC-8_3.9x4.9mm_Pitch1.27mm     6.2000    -4.5500  270.0000  top
+## End
