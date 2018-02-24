@@ -16,7 +16,7 @@ int main(void)
 	PORTB &= ~_BV(0); // Pin 0 set to LOW (equivalent to digitalWrite(0, LOW))
 
     /* Replace with your application code */
-	int i = 0;
+	int i = -1;
 	while (1)
 	{
 		i++;
@@ -26,6 +26,10 @@ int main(void)
 
 		roomba_send(162); // Virtual Wall
 		PORTB &= ~_BV(0); // digitalWrite(4, LOW);
-		delay_ten_us(100000);
+#ifdef ROOMBA_WALL_V2
+		delay_ten_us(50000);
+#else // others (eg. Christmas barrier)
+		delay_ten_us(10000);
+#endif
 	}
 }
