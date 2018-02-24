@@ -239,3 +239,7 @@ _Pvt_Extensions
 *.s#*
 Thumbs.db
 /.vscode
+
+# KiCAD
+*.bak
+*.kicad_pcb-bak

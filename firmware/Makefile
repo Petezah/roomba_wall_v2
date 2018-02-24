@@ -1,5 +1,5 @@
-MCU=attiny85
-AVRDUDEMCU=t85
+MCU=attiny45 #45
+AVRDUDEMCU=t45 #t45
 SYSCLOCK=8000000
 CC=/usr/bin/avr-gcc
 CFLAGS=-g -Os -Wall -mcall-prologues -mmcu=$(MCU) -DF_CPU=$(SYSCLOCK) -I./

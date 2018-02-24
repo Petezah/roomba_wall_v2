@@ -10,6 +10,8 @@ An AVR device, based on ATTiny85, to transmit a virtual wall signal for an iRobo
   * Source for the ATTiny85 firmware
 * /hardware
   * Files describing the board layout, etc
+* /christmas_tree_barrier
+  * Files describing the board layout for the Christmas tree barrier variation
 
 ## Building
 
